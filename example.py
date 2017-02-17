@@ -16,8 +16,10 @@ def tagAppear(id, x, y):
 		objList[id].append(y)
 		if id == 3:
 			king = character(id, 'Alex')
+			king.readVoice()
 		elif id == 6:
 			knight = character(id, 'Fred')
+			knight.readVoice()
 
 
 def tagMove(id, x, y):
@@ -44,8 +46,7 @@ try:
 					tagMove(obj.id, obj.xpos, obj.ypos)
 					for ob in objList:
 						print ob, objList[ob][0], objList[ob][1]
-						king.readVoice()
-						knight.readVoice()
+						
 		elif keyPress() =='s':
 			tracking.stop()
 		
