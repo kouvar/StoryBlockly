@@ -1,67 +1,56 @@
 import tuio
 
+from track import *
 import keyHandler
 from keyHandler import *
-import character
 from character import *
+from story import *
+from collections import *
+from tagRead import *
+from story2 import *
+import threading
+from threading import * 
+
+
 objList = {}
+nounList = defaultdict(list)
+verbList = defaultdict(list)
+speechList = defaultdict(list)
+tagList =[]
 tracking = tuio.Tracking()
+count = 0
+
+
 print "loaded profiles:", tracking.profiles.keys()
 print "list functions to access tracked objects:", tracking.get_helpers()
 
-def tagAppear(id, x, y):
-	if id not in objList:
-		objList.setdefault(id, [])
-		objList[id].append(x)
-		objList[id].append(y)
-		if id == 3:
-			king = character(id, 'Alex')
-			king.readVoice()
-		elif id == 6:
-			knight = character(id, 'Fred')
-			knight.readVoice()
-
-
-def tagMove(id, x, y):
-	if id in objList:
-		if objList[id][0] - x != 0:
-			objList[id][0] = x
-		if objList[id][1] - y != 0:
-			objList[id][1] = y
-	else:
-		tagAppear(id,x,y)
 
 
 
-try:
 
-	while 1:
-		if keyPress() == 'a':
-			while 1:
-				tracking.update()
-				for obj in tracking.objects():
-					
+'''def track():
+	global objList
+	tracking.update()
+	for obj in tracking.objects():
+		objList = tagTracking(obj.id, obj.xpos, obj.ypos)
+	print objList
 
-					tagAppear(obj.id, obj.xpos, obj.ypos)
-					tagMove(obj.id, obj.xpos, obj.ypos)
-					for ob in objList:
-						print ob, objList[ob][0], objList[ob][1]
-						
-		elif keyPress() =='s':
-			tracking.stop()
+threading.Timer(1, track)'''
+
+while 1:
+	try:
+		keypressed = True
+		key = keyPress()
+		if keypressed and key == " ":
+			
+			keypressed = False
+		tracking.update()
+		for obj in tracking.objects():
+			objList = tagTracking(obj.id, obj.xpos, obj.ypos)
+		text = readStory(objList)
 		
-
-            		
-
-
-except KeyboardInterrupt:
-	tracking.stop()
-
-
-
-
-
-
-
-
- 
+		
+		
+		convertToWav(text)
+	except:
+		print "error"

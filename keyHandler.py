@@ -11,7 +11,7 @@ def keyPress():
 		while 1:
 			try:
 				c = sys.stdin.read(1)
-				key = repr(c)
+
 				return c
 			except IOError: pass
 	finally:

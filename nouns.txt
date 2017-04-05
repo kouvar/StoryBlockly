@@ -1,0 +1,9 @@
+1 Dragon
+2 Firegirl
+3 Robot
+4 Dragon
+5 Firegirl
+6 Robot
+7 Dragon
+8 Firegirl
+9 Robot

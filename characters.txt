@@ -1,2 +1,10 @@
-3  Hi I am the King
-6  I am the Knight
+1 Knight
+2 Princess
+3 Knight
+4 Princess
+5 Knight
+6 Princess
+7 Knight
+8 Princess
+9 Knight
+10 Princess
