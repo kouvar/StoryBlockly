@@ -1,0 +1,36 @@
+0 The cat
+3 The cat
+4 The cat
+7 The cat
+9 The cat
+1 The mouse
+5 The mouse
+6 The mouse
+8 The mouse
+2 cheese
+10 cheese
+11 chases
+15 chases
+19 runs
+29 runs
+12 hisses
+16 hisses
+30 says hi
+13 eats
+17 eats
+20 eats
+14 explodes
+18 explodes
+21 The dragon
+23 The dragon
+25 The dragon
+22 The turtle
+24 The turtle
+26 The turtle
+27 dances
+28 dances
+31 loop
+32 loop 
+33 choice
+34 choice
+35 You picked mouse

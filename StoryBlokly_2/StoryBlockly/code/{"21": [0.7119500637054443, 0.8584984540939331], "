@@ -1,0 +1,11 @@
+{"1": [0.48995763063430786, 0.8499575853347778], "11": [0.29884353280067444, 0.8450283002853394],
+ "13": [0.29884353280067444, 0.8250283002853394],  "21": [0.0598843532800674, 0.8150283002853394]}
+
+ '''			elif tag[0] in branch:
+				key = 
+				if key == :
+					keyC = True
+					line = branch(keyC, tag, sortedYtags)
+				elif key ==:
+					keyM = True
+					line = branch(keyM, tag, sortedYtags)'''
