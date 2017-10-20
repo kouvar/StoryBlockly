@@ -5,8 +5,8 @@ from collections import *
 
 
 eachLine= {}
+text_line =[]
 
-text = []
 text_lines = []
 
 # Read strings from file 
@@ -26,12 +26,21 @@ def readText():
 def generateText(programLines):
 
 	eachLine= readText()
+
 	for line in programLines:
-		print line
-		text.append(eachLine[line[0]])
-			
-	text_lines.append(' '.join(text))		
-	return text_lines
+		text=[]
+		lines=[]
+
+		for word in line:
+			text.append(eachLine[word[0]])
+		
+		print text
+		text_line.append(' '.join(text))
+
+	
+	text_lines.append(text_line)
+	
+	return text_line
 
 
 

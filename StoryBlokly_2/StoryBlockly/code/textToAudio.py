@@ -10,43 +10,88 @@ from playAudio import *
 def convertToWav(text):
 	for line in text:
 
-		if line == "The mouse eats cheese":
-			system('say -v Alex ' + str(line) + '.')
+		if line == "Mouse eats cheese":
+			system('say -v Junior ' + str(line) + '.')
 			play_wav("../audio/eat.wav")
 
-		elif line == "The cat hisses ":
-			system('say -v Alex ' + str(line) +'.')
+		elif line == "Cat hisses":
+			system('say -v Junior ' + str(line) +'.')
+			play_wav("../audio/meow.wav")
+		elif line == "Cat says hi":
+			system('say -v Junior ' + str(line) +'.')
 			play_wav("../audio/meow.wav")
 
-		elif line == "The cat chases The mouse ":
-			system('say -v Alex ' + str(line)+'.')
+		elif line == "Cat chases Mouse":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+		elif line == "Cat runs after Mouse":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+		elif line == "Cat eats Mouse":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/eat.wav")
+
+		elif line == "Mouse runs after":
+			system('say -v Junior ' + str(line)+'.')
 			play_wav("../audio/chase.wav")
 
-		elif line == "The cat explodes":
-			system('say -v Alex ' + str(line)+'.')
+		elif line == "Cat dances":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/dance.wav")	
+
+		elif line == "Cat explodes":
+			system('say -v Junior ' + str(line)+'.')
 			play_wav("../audio/explode.wav")
 
-		elif line == "The dragon says hi ":
-			system('say -v Alex ' + str(line)+'.')
+		elif line == "Dragon explodes":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/explode.wav")
+
+		elif line == "Dragon says hi ":
+			system('say -v Junior ' + str(line)+'.')
 
 		elif line == "The turtle says hi":
-			system('say -v Alex ' + str(line)+'.')
+			system('say -v Junior ' + str(line)+'.')
 
-		elif line == "The dragon dances":
+		elif line == "Dragon dances":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/dance.wav")
+		elif line == "Turtle dances":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/dance.wav")
+		elif line == "Mouse chases Cat":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+
+		elif line == "Turtle runs after Dragon":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+		elif line == "Dragon runs after Turtle":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+		elif line == "Cat runs after":
+			system('say -v Junior ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+
+		elif line == "Turtle eats cheese":
+			system('say -v Alex ' + str(line)+'.')
+			play_wav("../audio/eat.wav")
+
+		
+		elif line == "Dragon dances Dragon dances":
 			system('say -v Alex ' + str(line)+'.')
 			play_wav("../audio/dance.wav")
-
-		elif line == "The turtle runs":
+		elif line == "Dragon chases Dragon chases":
+			system('say -v Alex ' + str(line)+'.')
+			play_wav("../audio/chase.wav")
+		elif line == "Dragon runs after Dragon runs after":
 			system('say -v Alex ' + str(line)+'.')
 			play_wav("../audio/chase.wav")
 
-		elif line == "The turtle eats cheese":
-			system('say -v Alex ' + str(line)+'.')
-			play_wav("../audio/chase.wav")
 
-		elif line == "The dragon dances":
-			system('say -v Alex ' + str(line)+'.')
-			play_wav("../audio/chase.wav")
+
+
+
 
 		
 		
@@ -54,7 +99,8 @@ def convertToWav(text):
 		else:
 
 			system('say -v Alex ' + str(line)+'.')
-	
+
+		time.sleep(0.4)
 	
 
 	

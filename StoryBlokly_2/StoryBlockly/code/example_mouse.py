@@ -69,14 +69,15 @@ def sortTagsX(tags):
 
 
 def compare(x, sorted_tags):
+	global newLine
 	newLine = []
 
 
 	for  i in range(sorted_tags.index(x), len(sorted_tags)):
-		if x[1][1] - sorted_tags[i][1][1] <=0.04:
+		if x[1][1] - sorted_tags[i][1][1] <=0.09:
 #			print x, x[1][1] - sorted_tags[i][1][1]
-				
-			newLine.append(sorted_tags[i])
+			if sorted_tags[i] not in newLine:
+				newLine.append(sorted_tags[i])
 				
 		
 	return newLine
@@ -113,9 +114,9 @@ def linesForText(lines):
 	flat_line = [tag for line in lines for tag in line ]
 	print flat_line
 	for tag in flat_line:
-		if int(tag[0]) == 31:
+		if int(tag[0]) == 32:
 			gotoStart = flat_line.index(tag)
-		elif int(tag[0]) == 32:
+		elif int(tag[0]) == 31:
 			gotoEnd = flat_line.index(tag)
 		elif int(tag[0]) == 33:
 			branchStart = True
